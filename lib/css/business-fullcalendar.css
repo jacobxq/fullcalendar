@@ -1,0 +1,344 @@
+.fullcalendar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    opacity: 1;
+    background-size: 22px 22px;
+    background:none;
+}
+.calendar-box{
+    opacity: 1;
+    width:1175px;
+    min-height:485px;
+    border:1px solid black;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    z-index: 101;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:8px;
+    box-sizing: border-box;
+    border-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+.calendar-header{
+    padding:8px 15px;
+    background:#344668;
+    color:#fff;
+    margin-bottom:8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.calendar-header .title{
+    width: 90%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+.calendar-header .closer{
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+    text-shadow: 0 1px 0 #ffffff;
+}
+.calendar-header .closer:before{
+    content: "脳";
+}
+.calendar-body{
+    margin: 0px 15px 8px 15px;
+    display:table;
+}
+.calendar-panel{
+    width:830px;
+    float:left;
+    position: relative;
+}
+.operation-panel{
+    width:302px;
+    min-height:345px;
+    margin-left:8px;
+    float:left;
+    position: relative;
+    padding:0px;
+}
+
+.operation-panel .operation-title,
+.operation-panel .operation-rules,
+.operation-panel .price-status,
+.operation-panel .operation-tips,
+.operation-panel .operation-buttons
+{padding:8px 0px;font-size:14px;height:34px;vertical-align: middle;}
+
+.operation-panel .operation-title{
+    font-weight: 700;
+    height:34px;
+    font-size:18px;
+    padding-top:0px;
+    padding-bottom:8px;
+}
+.operation-panel .operation-title span{color:#000;display:inline-block;padding:3px;}
+
+.calendar-box .operation-panel .batch-setting{
+    float:right;margin:0;padding:3px;
+}
+.operation-panel .operation-rules .rule-option,
+.operation-panel .operation-rules .rule-unit {
+    width:95px;font:14px FontAwesome !important;font-family: FontAwesome !important; padding:0px 5px;
+}
+.operation-panel .operation-rules .rule-value{font:14px FontAwesome !important;font-family: FontAwesome !important;
+    width:35px;height:25px;line-height:25px;box-sizing: content-box;box-shadow: none;
+    padding:0;border-left:1px solid #DDE2E8;border-right:1px solid #DDE2E8;padding:0 5px;}
+.operation-panel .operation-rules .rule-group{border:1px solid #DDE2E8;display:inline-block;border-radius:4px;}
+
+.operation-panel .price-status .status-radio{margin-left:8px;}
+.operation-panel .description textarea{
+    width:100%;
+    font-size:14px;
+    padding: 5px;
+    min-height:100px;
+}
+.operation-panel .description span{
+    font-size:12px;
+}
+.operation-panel .legend{
+    margin-top:25px;
+    padding:8px 0px;
+}
+.operation-panel .legend span{
+    font-size:12px;
+}
+
+.calendar-box .form-control{
+    border-radius: 0px;
+    width:118px;
+    display: inline-block;
+    height: 25px;
+    font-size: 14px;
+    background: #fff;
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.calendar-box .form-control:focus{
+    outline:0;
+}
+
+
+.calendar-panel .fc-button{
+    height: 28px;
+    width: 35px;
+    padding: 2px 3px;
+}
+
+.calendar-panel .fc-toolbar{margin:0;}
+.fc-price, .fc-cost, .fc-stock, .fc-profit{padding-left: 5px;display:block;}
+.fc-price{color:#0099CC;font-size:14px;font-weight: 700;}
+.fc-cost{color:#666;font-size:12px}
+.fc-stock{color:#666666;font-size:12px;padding:2px;}
+.fc-stock span{
+    padding: 0px 2px;
+    font-size:12px;
+    font-weight: 700
+}
+.over-book{
+    color: black;
+    border:1px solid black;
+}
+.retain{
+    color: blue;
+    border: 1px solid blue;
+}
+.buy-out{
+    color: red;
+    border:1px solid red;
+}
+
+.own {
+    color: #4CAF50;
+    border: 1px solid #4CAF50;  
+}
+
+.ownPrice {
+    background: red;
+    color: #fff;
+    padding: 2px;
+}
+
+.unuse {
+    background: #ccc;
+    color: #fff;
+    padding: 2px;
+}
+
+.fc-profit{color:#666;font-size:12px}
+.fc-event {
+    position: relative;
+    display: block;
+    font-size: .85em;
+    line-height: 1.3;
+    border-radius: 3px;
+    border: none;
+    background:none;
+    font-weight: normal;
+}
+.fc-content-skeleton{z-index:-1 !important;}
+.fc-fri,.fc-sat{color:orange;}
+.calendar-panel .fc-content-skeleton .fc-day-number{font-size:14px;font-weight: bold;padding:0 3px 0 0;}
+.fc-week{height:78px ;}
+.fc-holiday{color:red;font-size:12px;font-weight: 700;width:16px;height:73px;
+    float:right;text-align: right;padding-bottom:3px;margin-right:-2px;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+}
+.fc-title{color:#000;}
+.fc-content-skeleton .fc-today{color:#f00;font-size: 18px !important;}
+.fc-bg .fc-today{background:none;}
+.fc-day-grid-container{height:auto !important;}
+.fc-content{margin-top:-20px;font-family: 'ArialMT', 'Arial';}
+.fc-unsellable span, .fc-unsellable-price{
+    color:#666666;
+}
+
+.fc-bg .selected, .fc-highlight-skeleton .fc-highlight{
+    background-color: rgba(52, 152, 219, .4);
+}
+.fc-bg .disable{
+    background-image:url('../../images/disable.png');
+    background-repeat:no-repeat;
+    background-position: right 0px bottom 0px;
+    background-size: 26px 26px;
+}
+.fc-bg .exclusive {
+    background-image:url('../../images/exclusive-price.png');
+    background-repeat:no-repeat;
+    background-position: right 0px bottom 0px;
+    background-size: 26px 26px;
+}
+
+.fc-toolbar .fc-center h2{
+    font-size: 20px;
+}
+
+
+.calendar-box .btn{
+    margin:5px; border-radius: 3px;display:inline-block;font-weight:normal;text-align: center;cursor: pointer;border:1px solid transparent;
+    white-space: nowrap;padding:6px 12px;font-size:14px;line-height:1.42857143;-webkit-user-select: none;font-family: inherit;text-transform: none;text-shadow: none;
+}
+.calendar-box .btn:active{
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+.calendar-box .btn:focus{
+    outline: 0;
+}
+.calendar-box .btn-group{position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.calendar-box .btn-group-sm .btn{
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.calendar-box .btn-group .btn{
+    width:38px;
+}
+.calendar-box .btn-group .btn-prev, .btn-group .btn-next-year{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.calendar-box .btn-group .btn-prev-year, .btn-group .btn-next{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.calendar-box .btn-group .btn-today{}
+.calendar-box .btn-group .btn-clear{}
+
+
+.calendar-box .btn-small{
+    padding: 1px 5px !important;
+    font-size: 12px !important;
+    line-height: 1.5;
+}
+.calendar-box .btn-warning, .btn-warning:active, .btn-warning:focus{
+    background:#f0ad4e;
+    border-color: #f0ad4e;color:#fff;
+}
+.calendar-box .btn-warning:hover{
+    background-color: #d58512;
+    border-color: #d58512;
+    color: #FFFFFF;
+}
+
+.calendar-box .btn-dark, .btn-dark:active, .btn-dark:focus{
+    color: #E9EDEF;
+    background-color: rgba(52, 73, 94, 0.88);
+    border-color: rgba(52, 73, 94, 0.88);}
+
+.calendar-box .btn-dark:hover{
+    background-color: #394D5F;
+    border-color: #394D5F;
+    color: #FFFFFF;
+}
+
+.calendar-box .btn-default{
+    background-color: #fff;
+    border-color: #ccc;
+}
+.calendar-box .btn-default:hover{
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.calendar-box .btn-default:active, .btn-default:focus{background: #fff;}
+.no-product-desc{
+	text-decoration: line-through;
+}
+.desc-btn{
+	position: absolute;
+	right:0;
+}
+.product-desc{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.operation-panel .legend span{
+    font-size:12px;
+}
+.fc-tag{
+	font-size:12px;
+	color:red;
+}
+.fc-red{
+	color:red;
+}
+.fc-cny{
+	font-size:14px;
+}
+.line {
+    border-top: 1px dashed #777;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -10px;
+}
